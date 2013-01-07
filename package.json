@@ -1,0 +1,39 @@
+{
+    "name": "packagejsonexample",
+    "description": "A documented package.json file",
+    "version": "0.0.1",
+    "homepage": "https://github.com/jeremyosborne/packagejsonexample",
+    "keywords": [
+        "package.json",
+        "package",
+        "example"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jeremyosborne/packagejsonexample.git"
+    },
+    "author": {
+        "name": "Jeremy Osborne",
+        "email": "jeremywosborne@gmail.com",
+        "url": "http://jeremyosborne.com/"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://github.com/jeremyosborne/packagejsonexample/blob/master/LICENSE.txt"
+        }
+    ],
+    "main": "src/package.js",
+    "engines": {
+        "node": ">= 0.6.x"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "fs-extra": "0.3.x",
+        "doccoh": "0.4.1"
+    },
+    "private": false,
+    "scripts": {
+        "dist": "node dist; node_modules/.bin/doccoh src/package.js"
+    }
+}
