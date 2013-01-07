@@ -7,7 +7,7 @@ About as close as I can get to a self documenting package.json file that also co
 
 
 ## package.json docs
-[Generated docs should be found here](http://htmlpreview.github.com/?https://github.com/jeremyosborne/public/blob/master/javascript/nodejs/packagejsonexample/docs/package.html). If for some reason I broke this link, just check out the `docs/package.html` in your favorite browser (it'll work better if you've checked out/downloaded the code).
+[Generated docs should be found here](http://htmlpreview.github.com/?https://github.com/jeremyosborne/packagejsonexample/blob/master/docs/package.html). If for some reason I broke this link, just check out the `docs/package.html` in your favorite browser (it'll work better if you've checked out/downloaded the code).
 
 
 
