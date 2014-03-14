@@ -1,7 +1,7 @@
 {
     "name": "packagejsonexample",
     "description": "A documented package.json file",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "homepage": "https://github.com/jeremyosborne/packagejsonexample",
     "keywords": [
         "package.json",
@@ -12,11 +12,21 @@
         "type": "git",
         "url": "https://github.com/jeremyosborne/packagejsonexample.git"
     },
+    "bugs": {
+        "url": "https://github.com/jeremyosborne/packagejsonexample/issues"
+    },
     "author": {
         "name": "Jeremy Osborne",
         "email": "jeremywosborne@gmail.com",
         "url": "http://jeremyosborne.com/"
     },
+    "contributors": [
+        {
+            "name": "Jeremy Osborne",
+            "email": "jeremywosborne@gmail.com",
+            "url": "http://jeremyosborne.com/"
+        }
+    ],
     "licenses": [
         {
             "type": "MIT",

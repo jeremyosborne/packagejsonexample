@@ -21,20 +21,20 @@ module.exports = {
     // on how much management we want to delegate to npm. I did not mark
     // optional vs. not-optional for the parameters, as a `package.json` file
     // is by its nature always optional.
-    
+
     // Our npm package name needs to be unique only if we are going to publish
-    // our package into an npm registry. If we aren't going to publish the 
+    // our package into an npm registry. If we aren't going to publish the
     // package the name can be anything we want.
     //
-    // Leave off redundant affixes like `node-package` or `package-js`. 
+    // Leave off redundant affixes like `node-package` or `package-js`.
     // We know it is JavaScript for Node.
     "name": "packagejsonexample",
     // A single line, or sometimes slightly longer, description of our package.
     "description": "A documented package.json file",
-    // [npm](http://npmjs.org) enforces the X.Y.Z semantic version 
+    // [npm](http://npmjs.org) enforces the X.Y.Z semantic version
     // scheme that is described at [http://semver.org/](http://semver.org/)
     // and we should follow this versioning for our package.
-    "version": "0.0.2",
+    "version": "0.0.3",
     // URL to the homepage for this package.
     "homepage": "https://github.com/jeremyosborne/packagejsonexample",
     // An array of keywords used to describe this package to search engines,
@@ -49,6 +49,10 @@ module.exports = {
         "type": "git",
         "url": "https://github.com/jeremyosborne/packagejsonexample.git"
     },
+    // File bugs here.
+    "bugs": {
+        "url": "https://github.com/jeremyosborne/packagejsonexample/issues"
+    },
     // Every package should have at least one author. There are a couple of
     // formats for the author. I prefer the explicit object format as follows:
     "author": {
@@ -56,6 +60,15 @@ module.exports = {
         "email": "jeremywosborne@gmail.com",
         "url": "http://jeremyosborne.com/"
     },
+    // People adding to the project. Same format as the author, except in
+    // an array.
+    "contributors": [
+        {
+            "name": "Jeremy Osborne",
+            "email": "jeremywosborne@gmail.com",
+            "url": "http://jeremyosborne.com/"
+        }
+    ],
     // What licenses govern this code, and where is the license associated
     // with this code?
     // The complex form, "licenses", is an array of objects.
@@ -67,14 +80,14 @@ module.exports = {
             "url": "http://github.com/jeremyosborne/packagejsonexample/blob/master/LICENSE.txt"
         }
     ],
-    // If there is a file that should be loaded when require()ing this 
-    // folder-as-a-package, declare this file here, relative to our package 
+    // If there is a file that should be loaded when require()ing this
+    // folder-as-a-package, declare this file here, relative to our package
     // structure.
     "main": "src/package.js",
     // Essentially, which Node.js platforms do we support? These are glob
-    // like expressions supported by the 
-    // [npm semantic version parser](https://npmjs.org/doc/semver.html), 
-    // and the below version means what it looks like: 
+    // like expressions supported by the
+    // [npm semantic version parser](https://npmjs.org/doc/semver.html),
+    // and the below version means what it looks like:
     //
     // require a Node.js installation that is greater than or equal to version 0.6.0
     "engines": {
@@ -92,8 +105,8 @@ module.exports = {
     "dependencies": {
     },
     // What dependencies are useful only for developers?
-    // Installed when we `npm install` in our working directory, but not 
-    // when people require our package in their own package.json. This is the 
+    // Installed when we `npm install` in our working directory, but not
+    // when people require our package in their own package.json. This is the
     // usual and accepted place to put test frameworks and documentation
     // tools.
     //
@@ -110,12 +123,12 @@ module.exports = {
     // purposes.
     "private": false,
     // npm has can manage a set of standard and non-standard scripts. The
-    // standard set of scripts can be run with: 
-    // 
+    // standard set of scripts can be run with:
+    //
     //     npm standard-script-name
     //
     // The non-standard scripts can be run with:
-    // 
+    //
     //     npm run-script script-name
     //
     // `dist` is a non-standard script, and can be run with:
