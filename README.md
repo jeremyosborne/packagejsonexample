@@ -5,11 +5,11 @@ I made this some time ago, and just recently I've noticed it's gotten a few star
 * [Introduction to npm (and package.json)](http://howtonode.org/introduction-to-npm)
 * [A package.json interactive guide](http://package.json.nodejitsu.com/)
 
-In particular, I just found this one (as of time of writing) which I like a lot:
+At time of writing, I like this a lot:
 
 * [Package.json Validator](http://package-json-validator.com/)
 
-And have used it to validate (and update) this projects `package.json`.
+I used it to validate (and update) this project's `package.json`. Cool stuff.
 
 
 
@@ -33,3 +33,4 @@ This package consists of a regular JavaScript object in a regular `src/package.j
     npm install
     # build docs and package.json file
     npm run-script dist
+

@@ -34,7 +34,7 @@ module.exports = {
     // [npm](http://npmjs.org) enforces the X.Y.Z semantic version
     // scheme that is described at [http://semver.org/](http://semver.org/)
     // and we should follow this versioning for our package.
-    "version": "0.0.3",
+    "version": "0.0.4",
     // URL to the homepage for this package.
     "homepage": "https://github.com/jeremyosborne/packagejsonexample",
     // An array of keywords used to describe this package to search engines,
@@ -113,15 +113,18 @@ module.exports = {
     // The packages we depend on for development:
     //
     // * **fs-extra**: Mixin for the fs (filesystem) module.
-    // * **doccoh**: Documentation utility for this code.
+    // * **docco**: Documentation utility for this code.
     "devDependencies": {
         "fs-extra": "0.3.x",
-        "doccoh": "0.4.1"
+        "docco": "*"
     },
     // Should this package be prevented from accidental publishing by npm?
-    // The default is false (not hidden), but I include this here for doc
-    // purposes.
-    "private": false,
+    // The default is false (not hidden).
+    //
+    // NOTE: Previous versions had this marked as true. I have unpublished
+    // this code from npm as it isn't the sort of code that should be up
+    // on npm (it's an example, not a useful module).
+    "private": true,
     // npm has can manage a set of standard and non-standard scripts. The
     // standard set of scripts can be run with:
     //
@@ -135,6 +138,6 @@ module.exports = {
     //
     //     npm run-script dist
     "scripts": {
-        "dist": "node dist; node_modules/.bin/doccoh src/package.js"
+        "dist": "node dist; node node_modules/.bin/docco src/package.js"
     }
 };

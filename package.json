@@ -1,7 +1,7 @@
 {
     "name": "packagejsonexample",
     "description": "A documented package.json file",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "homepage": "https://github.com/jeremyosborne/packagejsonexample",
     "keywords": [
         "package.json",
@@ -40,10 +40,10 @@
     "dependencies": {},
     "devDependencies": {
         "fs-extra": "0.3.x",
-        "doccoh": "0.4.1"
+        "docco": "*"
     },
-    "private": false,
+    "private": true,
     "scripts": {
-        "dist": "node dist; node_modules/.bin/doccoh src/package.js"
+        "dist": "node dist; node node_modules/.bin/docco src/package.js"
     }
 }
