@@ -34,8 +34,8 @@ module.exports = {
     // [npm](http://npmjs.org) enforces the X.Y.Z semantic version
     // scheme that is described at [http://semver.org/](http://semver.org/)
     // and we should follow this versioning for our package.
-    "version": "0.0.4",
-    // URL to the homepage for this package.
+    "version": "0.0.5",
+    // URL to the homepage for this project. Might be distinct from repository.
     "homepage": "https://github.com/jeremyosborne/packagejsonexample",
     // An array of keywords used to describe this package to search engines,
     // mainly for people searching within the npm universe.
@@ -54,14 +54,15 @@ module.exports = {
         "url": "https://github.com/jeremyosborne/packagejsonexample/issues"
     },
     // Every package should have at least one author. There are a couple of
-    // formats for the author. I prefer the explicit object format as follows:
+    // formats for the author. This is the explicit format.
+    // Think BDFL or original author.
     "author": {
         "name": "Jeremy Osborne",
         "email": "jeremywosborne@gmail.com",
         "url": "http://jeremyosborne.com/"
     },
-    // People adding to the project. Same format as the author, except in
-    // an array.
+    // People giving to the project. Same format as the author, except in
+    // as array of people vs. just a single person.
     "contributors": [
         {
             "name": "Jeremy Osborne",
@@ -86,10 +87,7 @@ module.exports = {
     "main": "src/package.js",
     // Essentially, which Node.js platforms do we support? These are glob
     // like expressions supported by the
-    // [npm semantic version parser](https://npmjs.org/doc/semver.html),
-    // and the below version means what it looks like:
-    //
-    // require a Node.js installation that is greater than or equal to version 0.6.0
+    // [npm semantic version parser](https://npmjs.org/doc/semver.html):
     "engines": {
         "node": ">= 0.6.x"
     },
@@ -100,9 +98,13 @@ module.exports = {
     // our own dependencies and we can be pretty much assured that the
     // modules we need will be ready to run.
     //
-    // **NOTE:** We don't have any dependencies for this module. See the
-    // `devDependencies` block for the way to include dependencies.
+    // Since json is yucky to hand edit, running the following auto-adds:
+    //
+    //     npm i some-module-name --save
     "dependencies": {
+        "fs-extra": "0.3.x",
+        "package-json-validator": "~0.5.6",
+        "async": "~0.2.10"
     },
     // What dependencies are useful only for developers?
     // Installed when we `npm install` in our working directory, but not
@@ -110,16 +112,13 @@ module.exports = {
     // usual and accepted place to put test frameworks and documentation
     // tools.
     //
-    // The packages we depend on for development:
+    // Since json is yucky to hand edit, running the following auto-adds:
     //
-    // * **fs-extra**: Mixin for the fs (filesystem) module.
-    // * **docco**: Documentation utility for this code.
+    //     npm i some-module-name --save-dev
     "devDependencies": {
-        "fs-extra": "0.3.x",
         "docco": "*"
     },
-    // Should this package be prevented from accidental publishing by npm?
-    // The default is false (not hidden).
+    // Should we disallow publishing to npm? Default is false.
     //
     // NOTE: Previous versions had this marked as true. I have unpublished
     // this code from npm as it isn't the sort of code that should be up
